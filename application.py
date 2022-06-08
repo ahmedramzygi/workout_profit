@@ -2,13 +2,13 @@ from flask import Flask, request, jsonify
 from workouts import Workout
 import werkzeug
 
-app= Flask(__name__)
+application= Flask(__name__)
 
-@app.route("/")
+@application.route("/")
 def index():
     # This will return Hello World in an h1 tag when you go to localhost:5000
     return '<h1>Hello World</h1>'
-@app.route('/biceps', methods=['GET', 'POST'])
+@application.route('/biceps', methods=['GET', 'POST'])
 def CountBiceps():
     # Post request
     if request.method == 'POST':
@@ -25,7 +25,7 @@ def CountBiceps():
     })
 
 
-@app.route('/shoulders', methods=['GET', 'POST'])
+@application.route('/shoulders', methods=['GET', 'POST'])
 def CountShoulders():
     # Post request
     if request.method == 'POST':
@@ -42,7 +42,7 @@ def CountShoulders():
     })
 
 
-@app.route('/squats', methods=['GET', 'POST'])
+@application.route('/squats', methods=['GET', 'POST'])
 def CountSquats():
     # Post request
     if request.method == 'POST':
@@ -60,4 +60,4 @@ def CountSquats():
 
 
 if __name__ == "__main__":
-    app.run()
+    application.run()
