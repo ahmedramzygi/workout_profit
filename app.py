@@ -7,7 +7,7 @@ app= Flask(__name__)
 @app.route("/")
 def index():
     # This will return Hello World in an h1 tag when you go to localhost:5000
-    return '<h1>Hello W orld</h1>'
+    return '<h1>Hello Wooorld</h1>'
 @app.route('/biceps', methods=['GET', 'POST'])
 def CountBiceps():
     # Post request
